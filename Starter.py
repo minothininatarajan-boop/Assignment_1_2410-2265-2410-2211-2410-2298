@@ -15,18 +15,20 @@ def show_menu():
     print("4. Exit")
 
 def add_movie():
-    # TODO: ask user for title, genre and rating
-    # TODO: store the movie in the movies list
-    pass
-
+    # Ask user for title, genre and rating
+    title = input("Enter movie title: ")
+    genre = input("Enter genre: ")
+    rating = input("Enter rating: ")
+    
+    # It stores the data in your list
+    movies.append({"title": title, "genre": genre, "rating": rating})
+    print("Movie added successfully!")
 
 def view_movies():
-
-    # Debugging task: check why the program crashes when the list is empty
-    if movies == "":
+    # FIXED LOGICAL ERROR: movies is a list [], not an empty string "" 
+    if not movies:
         print("No movies available")
-
-    # TODO: display all movies stored in the list
+   
     pass
 
 
