@@ -29,7 +29,13 @@ def view_movies():
     if not movies:
         print("No movies available")
    
-    pass
+else:
+        #Loop and display the movies
+        print("\n--- Current Movie Collection ---")
+        for movie in movies:
+            print(f"Title: {movie['title']} | Genre: {movie['genre']} | Rating: {movie['rating']}")
+
+
 
 
 def search_movie():
