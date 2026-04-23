@@ -39,10 +39,18 @@ else:
 
 
 def search_movie():
-    # TODO: ask user for movie title
-    # TODO: search movie in the list
-    # TODO: display result
-    pass
+    search_title = input("Enter movie title to search: ").lower()
+    found = False
+
+    for movie in movies:
+        if movie["title"].lower() == search_title:
+            print("\nMovie Found!")
+            print(f"Title: {movie['title']} | Genre: {movie['genre']} | Rating: {movie['rating']}")
+            found = True
+            break
+
+    if not found:
+        print("Movie not found in the collection.")
 
 
 def main():
@@ -68,3 +76,4 @@ def main():
 
 
 main()
+
