@@ -28,17 +28,14 @@ def view_movies():
     # FIXED LOGICAL ERROR: movies is a list [], not an empty string "" 
     if not movies:
         print("No movies available")
-   
-else:
-        #Loop and display the movies
+    else:
+        # Pushed to the right to stay inside the else
         print("\n--- Current Movie Collection ---")
         for movie in movies:
             print(f"Title: {movie['title']} | Genre: {movie['genre']} | Rating: {movie['rating']}")
 
-
-
-
 def search_movie():
+    # Pushed to the right to stay inside the function
     search_title = input("Enter movie title to search: ").lower()
     found = False
 
